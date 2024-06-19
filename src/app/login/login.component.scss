@@ -1,0 +1,26 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background-image: url(../../../public/assets/imgs/fondoLogin.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.text-center img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.mb-3 {
+    text-align: -webkit-center;
+}
+
+.loginButton {
+    text-align-last: center
+}

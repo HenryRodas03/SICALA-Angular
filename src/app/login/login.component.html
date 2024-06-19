@@ -1,0 +1,31 @@
+<div class="content">
+
+    <div class="card" style="width: 18rem;">
+        <form [formGroup]="loginForm" class="card-body">
+            <div class="text-center">
+                <img src="assets/imgs/logoLogin.png" class="rounded" alt="...">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Correo</label>
+                <input formControlName="email" type="email" class="form-control" id="exampleFormControlInput1"
+                    placeholder="email@ejemplo.com"
+                    aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback">
+                <label *ngIf="isSubmitted && formControlsLogin.email.errors?.required" style="color: red;">Correo
+                    obligatorio.</label>
+                <label *ngIf="isSubmitted && formControlsLogin.email.errors?.email" style="color: red;">Correo
+                    invalido.</label>
+            </div>
+            <div class="mb-3">
+                <label for="inputPassword5" class="form-label">Contraseña</label>
+                <input formControlName="password" type="password" id="inputPassword5" class="form-control"
+                    aria-describedby="passwordHelpBlock" placeholder="Contraseña">
+                <label *ngIf="isSubmitted && formControlsLogin.password.errors?.required" style="color: red;">contraseña
+                    obligatoria.</label>
+            </div>
+
+            <div class="loginButton">
+                <button (click)="login()" class="btn btn-secondary">Iniciar sesion</button>
+            </div>
+        </form>
+    </div>
+</div>

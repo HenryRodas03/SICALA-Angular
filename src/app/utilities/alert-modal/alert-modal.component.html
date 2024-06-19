@@ -1,0 +1,13 @@
+<div class="modal" tabindex="-1" [ngClass]="{'show': isVisible}" style="display: block; background: rgba(0,0,0,0.5);"
+    *ngIf="isVisible">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{ title }}</h5>
+            </div>
+            <div class="modal-body">
+                <p>{{ content }}</p>
+            </div>
+        </div>
+    </div>
+</div>
