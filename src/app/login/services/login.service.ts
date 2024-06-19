@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class LoginService {
-  private url = 'http://localhost:8080/api/login';
+  private url = 'https://backend-sicala.onrender.com/api/login';
 
   constructor(private http: HttpClient) {}
 

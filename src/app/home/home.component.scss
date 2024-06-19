@@ -1,0 +1,56 @@
+.navContainer {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center
+}
+
+.navContainer {
+    width: 100%;
+}
+
+.navbar-brand {
+    width: 12%;
+    margin-left: 0%;
+}
+
+.navbar-brand img {
+    width: 100%;
+    height: auto;
+}
+
+.title {
+    width: 88%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 34px;
+    font-family: auto;
+}
+
+.cardsContainer {
+    padding: 0% 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 48%;
+    border-radius: 20px;
+    border: solid;
+}
+
+.card-body {
+    display: flex;
+    padding: 0px;
+}
+
+.cardContents {
+    text-align: center;
+    height: 16vh;
+    padding: 16px;
+}
+
+.cardContents img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
