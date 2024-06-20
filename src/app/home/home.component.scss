@@ -36,6 +36,7 @@
     width: 48%;
     border-radius: 20px;
     border: solid;
+    overflow: hidden;
 }
 
 .card-body {
@@ -47,10 +48,14 @@
     text-align: center;
     height: 16vh;
     padding: 16px;
+    overflow: hidden;
 }
 
 .cardContents img {
     width: 100%;
     height: auto;
+    max-width: 100%;
+    max-height: 100%;
     margin-top: 10px;
+    object-fit: contain;
 }

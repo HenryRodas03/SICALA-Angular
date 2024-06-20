@@ -49,7 +49,6 @@ export class LoginComponent {
         .subscribe({
           next: (data: any) => {
             if (data['status']) {
-              console.log('🚀 ~ LoginComponent ~ login ~ data:', data);
               localStorage.setItem('isLoggedIn', 'true');
               localStorage.setItem('userId', data['data']['id']);
               localStorage.setItem('userRoleId', data['data']['rol']);
