@@ -31,10 +31,11 @@ export class HomeComponent {
       .getApplications()
       .subscribe({
         next: (data: any) => {
-          console.log(
-            '🚀 ~ HomeComponent ~ this.homeService.getApplications ~ data:',
-            data
-          );
+          if (data['status']) {
+            this.applications = data['data'];
+          } else {
+            this.alertModalService.open('Estado', data['message'], 3000);
+          }
 
           this.spinnerService.close();
         },
@@ -46,5 +47,9 @@ export class HomeComponent {
       .add(() => {
         this.spinnerService.close();
       });
+  }
+
+  toggleStatus(application: any) {
+    application.state = application.state === 1 ? 0 : 1;
   }
 }
