@@ -12,4 +12,8 @@ export class HomeService {
   getApplications() {
     return this.http.get(`${this.url}`);
   }
+
+  changeApplicationState(params: any) {
+    return this.http.put(this.url, params);
+  }
 }

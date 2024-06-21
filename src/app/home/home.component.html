@@ -12,42 +12,29 @@
 
 <div class="cardsContainer">
 
-    <div class="card">
+    <div class="card" *ngFor="let application of applications ">
         <div class="card-body">
             <div class="cardContents" style="width: 32%;">
                 <div style="height: 20%;">
-                    <label for="aplicatioonImg">Test1</label>
+                    <label for="aplicatioonImg"> {{application.name}} </label>
                 </div>
                 <div style="height: 80%;">
-                    <img src="assets/imgs/logoLogin.png" routerLink="/home" alt="Logo aplicacion">
+                    <img [src]="application.logo" routerLink="/home" alt="Logo aplicacion">
                 </div>
             </div>
-            <div class="cardContents" style="width: 40%;">Test</div>
+            <div class="cardContents" style="width: 40%;">Descripcion</div>
             <div class="cardContents" style="align-content: center; width: 28%; border-left: 2px solid #8e8e8e;">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                        [id]="application.id_aplications" [checked]="application.state === 1"
+                        (change)="toggleStatus(application)">
+                    <label class="form-check-label" for="flexSwitchCheckChecked">{{application.state ==
+                        1?'Activo':'Inactivo'}}</label>
+                </div>
                 <div>
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                    <a class="btn btn-primary launchButton" [href]="application.url" target="_blank"
+                        role="button">Lanzar</a>
                 </div>
-                <div>t2</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-body">
-            <div class="cardContents" style="width: 32%;">
-                <div style="height: 20%;">
-                    <label for="aplicatioonImg">Test1</label>
-                </div>
-                <div style="height: 80%;">
-                    <img src="assets/imgs/logoLogin.png" routerLink="/home" alt="Logo aplicacion">
-                </div>
-            </div>
-            <div class="cardContents" style="width: 40%;">Test</div>
-            <div class="cardContents" style="align-content: center; width: 28%; border-left: 2px solid #8e8e8e;">
-                <div>
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                </div>
-                <div>t2</div>
             </div>
         </div>
     </div>
